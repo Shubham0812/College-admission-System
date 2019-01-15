@@ -15,11 +15,11 @@ This is the first project was given to me as a part of college curriculum, while
 ![alt text](https://github.com/Shubham0812/College-admission-System/blob/master/assets/screenshots/option3.JPG)
 
 ## Technology used
- C programming and code blocks IDE
+ C programming and code blocks IDE.
 
 ## Features
 - The project helps the student admission and registration process, and maintains a record of student's personal, academic and fee related data.
-- Generates student information and generates the fees invoice
+- Generates student information and generates the fees invoice.
 - Generates student’s academic Report.
 - Generates student’s personal Report.
 - Clean design and formatting.
