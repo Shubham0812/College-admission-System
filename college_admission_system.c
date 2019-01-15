@@ -69,8 +69,10 @@ void admission_form()
     student_id = fopen("student_id.txt","a+");
     printf(" \t \t STUDENT ADMISSION FORM \n");
     printf("\n\t\t\t\t\tuse underscore\"_\" for space\n");
-    printf("\n1.Personal Details \n \n \n");
-    printf("Enter Your Unique Id\n");
+    printf("\nPlease fill the details very carefully.\n\n");
+    printf("\n1.Personal Details \n \n");
+    printf("Generate your admission id [6-8 digits] : ");
+    printf("Generate your admission id [6-8 digits] : ");
     scanf("%d",&form.uniq_id);
     while(!feof(student_id)) {
         fscanf(student_id,"%d",&check_id);
@@ -168,7 +170,7 @@ void academic_details()
                 Found=1;
             }
         }
-        
+
         // if the student id exists then the user is displayed the branches in college.
         if(Found) {
             printf("\n\nAcademic Details\n\n\n");
@@ -235,8 +237,8 @@ void fees_details()
 {
     int feec,bec;
      printf("\n\nFEES DETAILS:\n\n");
-                 printf("Select the Course \n\n");
-                 printf("\n1.B.E\n\n2.Exit\n\n");
+                 printf("Select the Degree \n");
+                 printf("\n1.B.E\n\n2.M.TECH\n\n3.Exit\n\n");
                  scanf("%d",&feec);
                  switch(feec)
                   {
@@ -356,8 +358,7 @@ void search_student()
             printf("\nUnique ID:%d\n \n  The Name of Student:%s\n \n The dob of student:%s\n \n Gender of the student:%s\n \n religion of the student:%s\n \n nationality of the student:%s\n \n Address :%s\n \n City :%s\n \n Father's Name:%s\n \n Father's Occupation:%s\n \n Mother's Name:%s\n \n Mother's Occupation:%s\n \n Father's Income:%s\n \n Mother's Income:%s\n \n Name of Board of Class 10th:%s\n \n Name of School of Class 10th:%s\n \n Name of School State of Class 10th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nName of Board of Class 12th:%s\n \n Name of School of Class 12th:%s\n \n Name of School State of Class 12th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nMigration Card:%s\n \nTransfer Certificate:%s\n\n",form.uniq_id,form.Name,form.dob,form.Gender,form.Religion,form.Nationality,form.Address,form.City,form.Father_Name,form.Father_Occupation,form.Mother_Name,form.Mother_Occupation,form.father_income,form.mother_income,form.Name_b,form.Name_school,form.school_s,form.maxmarks,form.marksob,form.perc,form.yop,form.Name_b1,form.Name_school1,form.school_s1,form.maxmarks1,form.marksob1,form.perc1,form.yop1,form.mig,form.tc);
             }
         else if(!Found)
-            printf("!
-.\n");
+            printf("!\n");
         fclose(student_detail);
     }
 
