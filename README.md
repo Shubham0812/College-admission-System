@@ -6,6 +6,7 @@ This is the first project was given to me as a part of college curriculum, while
 
 ## Screenshots
 
+![alt text](https://github.com/Shubham0812/College-admission-System/blob/master/assets/screenshots/home.JPG)
 
 ## Technology used
  C programming and code blocks IDE
