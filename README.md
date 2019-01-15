@@ -114,4 +114,4 @@ void show_academic_details() {
 2. Run the file college_admission_system.c with a suitable C IDE.
 
 ## Credits
-**©** Shubham Kumar Singh
+**©** Shubham Kumar Singh | 2015
