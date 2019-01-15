@@ -69,10 +69,8 @@ void admission_form()
     student_id = fopen("student_id.txt","a+");
     printf(" \t \t STUDENT ADMISSION FORM \n");
     printf("\n\t\t\t\t\tuse underscore\"_\" for space\n");
-    printf("\nPlease fill the details very carefully.\n\n");
-    printf("\n1.Personal Details \n \n");
-    printf("Generate your admission id [6-8 digits] : ");
-    printf("Generate your admission id [6-8 digits] : ");
+    printf("\n1.Personal Details \n \n \n");
+    printf("Enter Your Unique Id\n");
     scanf("%d",&form.uniq_id);
     while(!feof(student_id)) {
         fscanf(student_id,"%d",&check_id);
@@ -148,8 +146,7 @@ void admission_form()
 
 
 // this function displays the academic details of the student based on branch
-void academic_details()
-{
+void show_academic_details() {
 
     //local variables for the function
     int adm,choice;
@@ -170,7 +167,7 @@ void academic_details()
                 Found=1;
             }
         }
-
+        
         // if the student id exists then the user is displayed the branches in college.
         if(Found) {
             printf("\n\nAcademic Details\n\n\n");
@@ -233,169 +230,154 @@ void academic_details()
 
 
 //fees details of the student to be seleceted by the student//
-void fees_details()
-{
+void fees_details() {
     int feec,bec;
-     printf("\n\nFEES DETAILS:\n\n");
-                 printf("Select the Degree \n");
-                 printf("\n1.B.E\n\n2.M.TECH\n\n3.Exit\n\n");
-                 scanf("%d",&feec);
-                 switch(feec)
-                  {
-                    case 1:
-                    printf("\t\t\t\nB.E.\n");
-                    printf("\n\nEnter The Admission Type:-\n");
-                    printf("\n1.COMEDK-UGET\n\n2.CET\n\n3.Others\n\n");
-                    scanf("%d",&bec);
-                    if(bec==1)
-                    {
-                    printf("\n\nCOMEDK-UGET\n\n");
-                    printf("\n\n\t\t\t\t\tFees per Year\n");
-                    printf("\nTution Fees= 1,00,000/-\n");
-                    printf("\nCollege University Fees = 35,000/-");
-                    printf("\nUniversity Eligibility Fees = 1,500/- \n");
-                    printf("\nHostel Fees\n\n");
-                    printf("\nCaution Deposit = 15,000/-");
-                    printf("\nRoom Rent/Electricity Charges = 48,000/-");
-                    printf("\nTotal Hostel Fees\n\n");
-                    printf("\nHostel Mess Charges = 1800/- per month\n");
-                    break;
-                    }
-                      else if(bec==2)
-                    {
-                     printf("\n\n\t\t\tCET\n\n");
-                     printf("\n\n\t\t\t\t\tFees per Year\n");
-                     printf("\nTution Fees= 37,000/-\n");
-                     printf("\nCollege University Fees = 30,000/-");
-                     printf("\nHostel Fees\n\n");
-                     printf("\nCaution Deposit = 15,000/-");
-                     printf("\nRoom Rent/Electricity Charges = 48,000/-");
-                     printf("\nTotal Hostel Fees\n\n");
-                     printf("\nHostel Mess Charges = 1800/- per month\n");
-                    break;
-                    }
-                      else
-                    {
-                     printf("\n\n\t\t\tOthers\n\n");
-                     printf("\n\n\t\t\t\t\tFees per Year\n");
-                     printf("\nTution Fees= 1,37,000/-\n");
-                     printf("\nCollege University Fees = 30,000/-");
-                     printf("\nUniversity Eligibility Fees = 1,500/- \n");
-                     printf("\nHostel Fees\n\n");
-                     printf("\nCaution Deposit = 15,000/-");
-                     printf("\nRoom Rent/Electricity Charges = 48,000/-");
-                     printf("\nTotal Hostel Fees\n\n");
-                     printf("\nHostel Mess Charges = 1800/- per month\n");
-                    break;
-                    }
+    printf("\n\nFEES DETAILS:\n\n");
+    printf("Select the Course \n\n");
+    printf("\n1.B.E\n\n2.Exit\n\n");
+    scanf("%d",&feec);
+    switch(feec) {
+    case 1:
+            printf("\t\t\t\nB.E.\n");
+            printf("\n\nEnter The Admission Type:-\n");
+            printf("\n1.COMEDK-UGET\n\n2.CET\n\n3.Others\n\n");
+            scanf("%d",&bec);
+            if(bec==1) {
+                printf("\n\nCOMEDK-UGET\n\n");
+                printf("\n\n\t\t\t\t\tFees per Year\n");
+                printf("\nTution Fees= 1,00,000/-\n");
+                printf("\nCollege University Fees = 35,000/-");
+                printf("\nUniversity Eligibility Fees = 1,500/- \n");
+                printf("\nHostel Fees\n\n");
+                printf("\nCaution Deposit = 15,000/-");
+                printf("\nRoom Rent/Electricity Charges = 48,000/-");
+                printf("\nTotal Hostel Fees\n\n");
+                printf("\nHostel Mess Charges = 1800/- per month\n");
+                } else if(bec==2) {
+                printf("\n\n\t\t\tCET\n\n");
+                printf("\n\n\t\t\t\t\tFees per Year\n");
+                printf("\nTution Fees= 37,000/-\n");
+                printf("\nCollege University Fees = 30,000/-");
+                printf("\nHostel Fees\n\n");
+                printf("\nCaution Deposit = 15,000/-");
+                printf("\nRoom Rent/Electricity Charges = 48,000/-");
+                printf("\nTotal Hostel Fees\n\n");
+                printf("\nHostel Mess Charges = 1800/- per month\n");
+                } else {
+                printf("\n\n\t\t\tOthers\n\n");
+                printf("\n\n\t\t\t\t\tFees per Year\n");
+                printf("\nTution Fees= 1,37,000/-\n");
+                printf("\nCollege University Fees = 30,000/-");
+                printf("\nUniversity Eligibility Fees = 1,500/- \n");
+                printf("\nHostel Fees\n\n");
+                printf("\nCaution Deposit = 15,000/-");
+                printf("\nRoom Rent/Electricity Charges = 48,000/-");
+                printf("\nTotal Hostel Fees\n\n");
+                printf("\nHostel Mess Charges = 1800/- per month\n");
+                }
 
 
-                    default:    break;
-                        }
-
+    default:    break;
+    }
 }
+
+// for displaying all student details
 void display()
 {
 
-        int i;
+    //local variables
+    int i;
     float adminid;
     int Found=0;
-    if((admin_id=fopen("admin_id.txt","r"))==NULL)
+
+    // opening the admin file
+    if((admin_id=fopen("admin_id.txt","r"))==NULL) {
         printf(" ! The File is Empty...\n\n");
-    else
-    {
+    } else {
         printf("\nEnter The Administrator ID: ");
-          scanf("%f",&adminid);
-        while(!feof(admin_id)&& Found==0)
-        {
-        fscanf(admin_id,"%f",&host.id);
-            if(adminid==host.id)
+        scanf("%f",&adminid);
+        while(!feof(admin_id)&& Found==0) {
+            fscanf(admin_id,"%f",&host.id);
+            if(adminid==host.id) {
                 Found=1;
-
+            }
         }
-        if(Found)
-        {
-        student_detail = fopen("student_details.txt","a+");
-                printf("\nThe Details of Admission Form is in this Order:\n\n\nName\nDOB\nGender\nReligion\nNationality\nAddress\nCity\nFather's Name\nFather's Occupation\nMother's Name\nMother's Occupation\nFather's Income\nMother's Income\nClass 10th\nName of Board\nName of State\nState\nMax Marks\nMarks Obtained\nPercentage\nYear of passing\nClass 12th\nName of Board\nName of State\nState\nMax Marks\nMarks Obtained\nPercentage\nYear of passing\nMigration Card\nTransfer Certificate\n",information);
-                        do
-                            {
-                                fgets(information,600,student_detail);
-                                printf("%s\n\n",information);
-
-                            }
-                            while(!feof(student_detail));
-                            fclose(student_detail);
+        if(Found) {
+            student_detail = fopen("student_details.txt","a+");
+            printf("\nThe Details of Admission Form is in this Order:\n\n\nName\nDOB\nGender\nReligion\nNationality\nAddress\nCity\nFather's Name\nFather's Occupation\nMother's Name\nMother's Occupation\nFather's Income\nMother's Income\nClass 10th\nName of Board\nName of State\nState\nMax Marks\nMarks Obtained\nPercentage\nYear of passing\nClass 12th\nName of Board\nName of State\nState\nMax Marks\nMarks Obtained\nPercentage\nYear of passing\nMigration Card\nTransfer Certificate\n",information);
+            do {
+                fgets(information,600,student_detail);
+                printf("%s\n\n",information);
+                }
+            while(!feof(student_detail)); {
+                fclose(student_detail);
+            }
+        }
+        else if(!Found) {
+            printf("Please Enter the Correct Administrator ID\n\n");
+            fclose(admin_id);
+        }
     }
-        else if(!Found)
-         printf("Please Enter the Correct Administrator ID\n\n");
-         fclose(admin_id);
-
-
 }
-}
+
+// for searching student data based on student id
 void search_student()
 {
     int i;
     char Target[25];
     int Found=0;
     student_id=fopen("student_id.txt","r");
-    if((student_detail=fopen("student_details.txt","r"))==NULL)
+    if((student_detail=fopen("student_details.txt","r"))==NULL) {
         printf(" ! The File is Empty...\n\n");
-    else
-    {
+    } else {
         printf("\nEnter The Name Of Student : ");
-          scanf("%s",Target);
-        while(!feof(student_detail)&& Found==0)
-        {
-        fscanf(student_detail,"%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s",form.Name,form.dob,form.Gender,form.Religion,form.Nationality,form.Address,form.City,form.Father_Name,form.Father_Occupation,form.Mother_Name,form.Mother_Occupation,form.father_income,form.mother_income,form.Name_b,form.Name_school,form.school_s,form.maxmarks,form.marksob,form.perc,form.yop,form.Name_b1,form.Name_school1,form.school_s1,form.maxmarks1,form.marksob1,form.perc1,form.yop1,form.mig,form.tc);
-         fscanf(student_id,"%d",&form.uniq_id);
-            if(strcmp(Target,form.Name)==0)
+        scanf("%s",Target);
+        while(!feof(student_detail)&& Found==0) {
+            fscanf(student_detail,"%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s",form.Name,form.dob,form.Gender,form.Religion,form.Nationality,form.Address,form.City,form.Father_Name,form.Father_Occupation,form.Mother_Name,form.Mother_Occupation,form.father_income,form.mother_income,form.Name_b,form.Name_school,form.school_s,form.maxmarks,form.marksob,form.perc,form.yop,form.Name_b1,form.Name_school1,form.school_s1,form.maxmarks1,form.marksob1,form.perc1,form.yop1,form.mig,form.tc);
+            scanf(student_id,"%d",&form.uniq_id);
+            if(strcmp(Target,form.Name)==0) {
                 Found=1;
-
-        }
-        if(Found)
-        {
-            printf("\nUnique ID:%d\n \n  The Name of Student:%s\n \n The dob of student:%s\n \n Gender of the student:%s\n \n religion of the student:%s\n \n nationality of the student:%s\n \n Address :%s\n \n City :%s\n \n Father's Name:%s\n \n Father's Occupation:%s\n \n Mother's Name:%s\n \n Mother's Occupation:%s\n \n Father's Income:%s\n \n Mother's Income:%s\n \n Name of Board of Class 10th:%s\n \n Name of School of Class 10th:%s\n \n Name of School State of Class 10th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nName of Board of Class 12th:%s\n \n Name of School of Class 12th:%s\n \n Name of School State of Class 12th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nMigration Card:%s\n \nTransfer Certificate:%s\n\n",form.uniq_id,form.Name,form.dob,form.Gender,form.Religion,form.Nationality,form.Address,form.City,form.Father_Name,form.Father_Occupation,form.Mother_Name,form.Mother_Occupation,form.father_income,form.mother_income,form.Name_b,form.Name_school,form.school_s,form.maxmarks,form.marksob,form.perc,form.yop,form.Name_b1,form.Name_school1,form.school_s1,form.maxmarks1,form.marksob1,form.perc1,form.yop1,form.mig,form.tc);
             }
-        else if(!Found)
+        }
+        if(Found) {
+            printf("\nUnique ID:%d\n \n  The Name of Student:%s\n \n The dob of student:%s\n \n Gender of the student:%s\n \n religion of the student:%s\n \n nationality of the student:%s\n \n Address :%s\n \n City :%s\n \n Father's Name:%s\n \n Father's Occupation:%s\n \n Mother's Name:%s\n \n Mother's Occupation:%s\n \n Father's Income:%s\n \n Mother's Income:%s\n \n Name of Board of Class 10th:%s\n \n Name of School of Class 10th:%s\n \n Name of School State of Class 10th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nName of Board of Class 12th:%s\n \n Name of School of Class 12th:%s\n \n Name of School State of Class 12th:%s\n \n Max Marks:%s\n \n Marks Obtained:%s\n \nPercentage:%s\n \nYear of Passing:%s\n \nMigration Card:%s\n \nTransfer Certificate:%s\n\n",form.uniq_id,form.Name,form.dob,form.Gender,form.Religion,form.Nationality,form.Address,form.City,form.Father_Name,form.Father_Occupation,form.Mother_Name,form.Mother_Occupation,form.father_income,form.mother_income,form.Name_b,form.Name_school,form.school_s,form.maxmarks,form.marksob,form.perc,form.yop,form.Name_b1,form.Name_school1,form.school_s1,form.maxmarks1,form.marksob1,form.perc1,form.yop1,form.mig,form.tc);
+        }
+        else if(!Found) {
             printf("!\n");
+        }
+
+        //closing the student_details file
         fclose(student_detail);
     }
-
 }
-main()
+
+// main function
+void main()
 {
     int i,j,n,choice,feec,bec,pgc,adm;
     long int m;
-     for(;;)
-     {
-    printf("\n\n+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+--\n");
-    printf("+ \t\t     MENU\t\t\t+\n+\t\t\t\t\t\t");
-    printf("+\n+\t\t\t\t\t\t+\n+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-\n");
-    printf("+\t\t\t\t\t\t+\n+ 1.Admission/Registration\t\t\t+\n+\t\t\t\t\t\t+\n+ 2.Academic Details\t\t\t\t+\n+\t\t\t\t\t\t+\n+ 3.Fees Details\t\t\t\t+\n+\t\t\t\t\t\t+\n+ 4.Search Your Registration By Name\t\t+\n+\t\t\t\t\t\t+\n+ 5.Show all Registrations\t\t\t+\n+\t\t\t\t\t\t+\n+ 6.Quit\t\t\t\t\t+\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-");
+    for(;;) {
+        printf("\n\n+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+--\n");
+        printf("+ \t\t     MENU\t\t\t+\n+\t\t\t\t\t\t");
+        printf("+\n+\t\t\t\t\t\t+\n+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-\n");
+        printf("+\t\t\t\t\t\t+\n+ 1.Admission/Registration\t\t\t+\n+\t\t\t\t\t\t+\n+ 2.Academic Details\t\t\t\t+\n+\t\t\t\t\t\t+\n+ 3.Fees Details\t\t\t\t+\n+\t\t\t\t\t\t+\n+ 4.Search Your Registration By Name\t\t+\n+\t\t\t\t\t\t+\n+ 5.Show all Registrations\t\t\t+\n+\t\t\t\t\t\t+\n+ 6.Quit\t\t\t\t\t+\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-");
+        printf("\n\nEnter Your Choice? \n\n");
+        scanf("%d",&choice);
+        switch(choice) {
+        case 1: system("cls");
+                admission_form();
+                break;
+        case 2: show_academic_details();
+                break;
+        case 3: fees_details();
+                break;
+        case 4: search_student();
+                break;
+        case 5: display();
+                break;
+        case 6: return;
 
-
-
-       printf("\n\nEnter Your Choice? \n\n");
-       scanf("%d",&choice);
-        switch(choice)
-         {
-
-            case 1: system("cls");
-                    admission_form();
-                    break;
-            case 2: academic_details();
-                    break;
-            case 3: fees_details();
-                    break;
-            case 4: search_student();
-                    break;
-            case 5: display();
-                    break;
-            case 6: return;
-
-            default:break;
-
+        default:break;
         }
     }
   }
